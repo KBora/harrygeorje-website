@@ -7,60 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB"
-        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">    
 
 </head>
 
 <body>
 
-    <nav class="menu--bg">
-  
-        <div class="mobile-menu-header px-3 menu--bg">
-                <a href="tel:0421432871" class="nav--header__phone d-block d-sm-none">
+    <nav class="nav-mobile transition--bg1 d-block d-sm-none">       
+        <div class="nav-mobile__header px-3 transition--bg1">
+                <a href="tel:0421432871" class="nav-mobile__header__icon d-block d-sm-none">
                     <svg class="inline-svg" aria-hidden="true" 
                     data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" 
                     width="20" height="20" viewBox="0 0 512 512" >
                     <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
                     </svg>
                 </a>
-                <div class="nav--header__logo">
-                        <img src="/images/hg-logo-colored-no-date.png" class="logo logo--mobile d-block d-sm-none">
-                        <img src="/images/hg-logo-colored-helmet.png" class="logo logo--desktop d-none d-sm-block">
+                <div class="nav-mobile__header__logo">
+                        <img src="/images/hg-logo-colored-no-date.png" class="img-fluid">                        
                 </div>
-                <label for="collapsibleMobileMenu" class="lbl-toggle px-0" id="collapsibleMobileMenuToggler">
-                        
-                <svg 
-                    class="inline-svg" version="1.1" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    xmlns:xlink="http://www.w3.org/1999/xlink" 
-                    x="0px" y="0px"
-                    width="24" height="29"  xml:space="preserve">
-               <title>Mobile Menu</title>
-               <g class="svg-menu-toggle">
-
-               <path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0
-                   c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z">
-               </path>
-               <path class="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z">
-               </path>
-               <path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0
-                   c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z">
-               </path>
-               <!-- needs to be here as a 'hit area' -->
-     <rect width="24" height="29" fill="none">
-
-               </rect>
-               </g>
-
-   </svg>
-                </label>                
+                <label for="collapsibleMobileMenu" class="lbl-toggle px-0 nav-mobile__header__icon" id="collapsibleMobileMenuToggler">
+                    <svg class="inline-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="24" height="29" xml:space="preserve">
+                        <title>Mobile Menu</title>
+                        <g class="svg-menu-toggle">
+                
+                            <path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0
+                                                c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z">
+                            </path>
+                            <path class="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z">
+                            </path>
+                            <path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0
+                                                c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z">
+                            </path>
+                            <!-- needs to be here as a 'hit area' -->
+                            <rect width="24" height="29" fill="none">
+                
+                            </rect>
+                        </g>                
+                    </svg>
+                </label>
         </div>
     
         <input id="collapsibleMobileMenu" class="toggle" type="checkbox">                
         <div class="collapsible-content">
-                <div class="menu menu--bg px-3 py-3">
+                <div class="nav-mobile__menu transition--bg1 px-3 py-3">
    
                         <div class="menu__item">
                             <label for="collapsibleMobileMenuDiamonds" class="lbl-toggle">
@@ -135,14 +125,49 @@
                             </a>
                         </div>
                                                             
-                        <div class="menu__socials">
-                            <i class="fab fa-facebook-f mx-3"></i>
-                            <i class="fab fa-instagram mx-3"></i>
+                        <div class="menu__socials">                            
+
+                            <a href="">
+                            <svg class="inline-svg" 
+                            width="24"
+                            height="24"
+                            aria-hidden="true" 
+                            data-prefix="fab" 
+                            data-icon="facebook-f" 
+                            role="img" 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 264 512" 
+                            data-fa-i2svg="">
+                            <path fill="currentColor" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"></path></svg>
+                            </a>
+
+                            <a href="">
+                                    <svg 
+                                    width="24"
+                                    height="24"
+                                    class="inline-svg" 
+                                    aria-hidden="true" 
+                                    data-icon="instagram" 
+                                    role="img" 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    viewBox="0 0 448 512" 
+                                    data-fa-i2svg="">
+                                    <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                                    </svg>
+
+                            </a>
                         </div>
                     </div>
         </div>
-
+   
     </nav>
+
+
+    <nav class="nav-desktop d-none d-sm-block">
+        Desktop menu
+        <img src="/images/hg-logo-colored-helmet.png" class="logo--desktop">
+    </nav>
+    
 
     <main>
         <div class="container">

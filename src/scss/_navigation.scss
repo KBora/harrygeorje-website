@@ -1,37 +1,19 @@
-nav {
+.nav-mobile {
 
-    &.menu--bg.menu--expanded {
+    &.transition--bg1.expand {
         position: fixed;
         height: 100%;
         background-color: $hgd-color-cream;
         transition: background-color 1s ease-in-out;
-        overflow: auto;
+        overflow-y: auto;
 
     }
-    .logo--desktop {
-        max-width: 387px;
-    }
-
-    .nav--header {
-        display: flex;
-        justify-content:  space-between;
-        align-items: center;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        position: relative;
-        height: 60px;
-        background-color: #ffffff;
-        transition: background-color 1s ease-in-out;
-
-        &.menu-expanded {
-            box-shadow: initial;
-            background-color: $hgd-color-cream;
-        }
-    }
-
+    
     a  {
         display: block;
         text-decoration: none;
         color: $hgd-color-text;
+        margin: 0 0.5rem;
         &:hover,
         &:focus,
         &:active {
@@ -40,14 +22,30 @@ nav {
         }
     }
 
-    .menu {
+    .nav-mobile__header {    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;    
+        transition: background-color 1s ease-in-out;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    
+        &.expand {
+            background-color: $hgd-color-cream;
+        }
+    
+        .nav-mobile__header__logo {
+            max-width: 196px;
+        }    
+    }
 
+    .nav-mobile__menu  {
         transition: background-color 1s ease-in-out;
         background-color: #ffffff;
         text-align: center;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
-        &.menu--expanded {
+        &.expand {
             background-color: $hgd-color-cream;
         }
         .menu__item {           
@@ -83,27 +81,15 @@ nav {
 
         .menu__socials {
             margin: 2rem 0 0.5rem 0;
+            display: flex;
+            justify-content: center;
         }
-    }     
-}
-
-
-.mobile-menu-header {    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;    
-    transition: background-color 1s ease-in-out;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-
-    &.menu--expanded {
-        background-color: $hgd-color-cream;
-    }
-
-    .logo--mobile {
-        width: 196px;
     }    
+        
 }
+
+
+
 
 
 // css collapsibles
@@ -115,16 +101,11 @@ input[type='checkbox'] {
     padding: 1rem;
     margin-bottom: initial;
     cursor: pointer;
-    transition: all 0.25s ease-out;
-
   }
-
-  
   
   .lbl-toggle:hover {
     color: #7C5A0B;
   }
-
   
   .collapsible-content .content-inner {
     background: $hgd-color-cream;
@@ -135,14 +116,14 @@ input[type='checkbox'] {
   .collapsible-content {
     max-height: 0px;
     overflow: hidden;  
-    transition: max-height .25s ease-in-out;
+    transition: max-height 0.1s ease-in;
+    
   }
 
   .toggle:checked + .collapsible-content {
-    max-height: 100vh;
+    max-height: 700px;
+    transition: max-height 2s ease;
   }
-
-
 
 
 // menu hamburger svg animation
@@ -179,7 +160,7 @@ input[type='checkbox'] {
 
 }
 
-.menu--expanded .svg-menu-toggle {
+.expand .svg-menu-toggle {
 
     .bar:nth-of-type(1) {		
 		-webkit-transform:rotate(-45deg) translateY(0) translateX(0);
@@ -197,8 +178,9 @@ input[type='checkbox'] {
     }
 }
 
-.inline-svg {
-  display:block;
-  margin:0 auto;
-}
 
+
+
+.logo--desktop {
+    max-width: 387px;
+}
