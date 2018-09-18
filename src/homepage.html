@@ -23,9 +23,11 @@
                     </svg>
                 </a>
                 <div class="nav-mobile__header__logo">
-                        <img src="/images/hg-logo-colored-no-date.png" class="img-fluid">                        
+                        <a href="/"><img src="/images/hg-logo-colored-no-date.png" class="img-fluid"></a>
                 </div>
-                <label for="collapsibleMobileMenu" class="lbl-toggle px-0 nav-mobile__header__icon" id="collapsibleMobileMenuToggler">
+                <a href=""                
+                class="collapsible-toggler px-0 nav-mobile__header__icon"
+                data-collapse-selector="transition--bg1">
                     <svg class="inline-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         x="0px" y="0px" width="24" height="29" xml:space="preserve">
                         <title>Mobile Menu</title>
@@ -40,23 +42,22 @@
                                                 c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z">
                             </path>
                             <!-- needs to be here as a 'hit area' -->
-                            <rect width="24" height="29" fill="none">
+                            <!-- <rect width="24" height="29" fill="none">
                 
-                            </rect>
+                            </rect> -->
                         </g>                
                     </svg>
-                </label>
+                </a>
         </div>
-    
-        <input id="collapsibleMobileMenu" class="toggle" type="checkbox">                
-        <div class="collapsible-content">
+              
+        <div class="collapsible-content transition--bg1">
                 <div class="nav-mobile__menu transition--bg1 px-3 py-3">
    
                         <div class="menu__item">
-                            <label for="collapsibleMobileMenuDiamonds" class="lbl-toggle">
+                            <a href="" class="collapsible-toggler">
                                 Diamonds
-                            </label>
-                            <input id="collapsibleMobileMenuDiamonds" class="toggle" type="checkbox">
+                            </a>
+                        
                             <div class="collapsible-content">
                                 <div class="menu__item__sub-items">
                                     <div class="menu__item__sub-item">
@@ -74,11 +75,10 @@
    
             
                         <div class="menu__item">
-                            <label for="collapsibleMobileMenuServices" class="lbl-toggle">
+                            <a href="" class="collapsible-toggler">
                                 Services
-                            </label>
-                        
-                            <input id="collapsibleMobileMenuServices" class="toggle" type="checkbox">
+                            </a>
+                                                    
                             <div class="collapsible-content">
                                 <div class="menu__item__sub-items">
                                     <div class="menu__item__sub-item">
@@ -100,11 +100,9 @@
                         </div>
 
                         <div class="menu__item">
-                            <label for="collapsibleMobileMenuAbout" class="lbl-toggle">
+                            <a href="" class="collapsible-toggler">
                                 About
-                            </label>
-                        
-                            <input id="collapsibleMobileMenuAbout" class="toggle" type="checkbox">
+                            </a>
                             <div class="collapsible-content">
                         
                                 <div class="menu__item__sub-items">
@@ -189,6 +187,12 @@
             <h1>Harry Georje Diamonds Australia</h1>
             <p>Invest in beauty</p>
         </div>
+
+        <p>At Harry Georje Diamonds, our expert team of jewellers craft exquisite designs at remarkable value. We are truly international specialists with our global experience and established network of high-quality suppliers spanning a variety of exceptional materials including diamonds, precious stones, gold, platinum, and silver.</p>
+        <p>Whether you are looking for an engagement ring, a custom-designed statement piece, or a lucrative diamond investment, you will find a unique and outstanding piece of jewellery at Harry Georje Diamonds.</p>
+        <p>Simply give us a call to arrange a complimentary appointment in our relaxed showroom in the Sydney CBD and we’ll be happy to share our expertise to help you choose that special piece.</p>
+        <p>You may also be interested to hear that Harry Georje frequently acts as a keynote speaker providing expertise on diamonds as financial investments at various seminars and conferences. If you would like to attend an upcoming event, please let us know, and we will help you to access an invitation.</p>
+
     </main>
 
     <script src="/js/app.js"></script>

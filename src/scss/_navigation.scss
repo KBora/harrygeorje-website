@@ -1,19 +1,21 @@
 .nav-mobile {
+    position: fixed;
+    top: 0;
 
     &.transition--bg1.expand {
-        position: fixed;
+        top: 0;
         height: 100%;
+        width: 100%;
         background-color: $hgd-color-cream;
         transition: background-color 1s ease-in-out;
         overflow-y: auto;
-
+        z-index: 2;
     }
     
     a  {
         display: block;
         text-decoration: none;
         color: $hgd-color-text;
-        margin: 0 0.5rem;
         &:hover,
         &:focus,
         &:active {
@@ -70,10 +72,10 @@
                 font-size: 1rem;
                 flex: 0 0 115px;
                 line-height: 1;
-                margin: 0 0 1rem 0;
+                margin: 0 0 0.5rem 0;
 
                 a {
-                    padding: 0 1rem 1rem 1rem;
+                    padding: 0 1rem 0.75rem 1rem;
                 }
 
             }
@@ -83,6 +85,10 @@
             margin: 2rem 0 0.5rem 0;
             display: flex;
             justify-content: center;
+
+            a {
+                margin: 0 0.5rem;
+            }
         }
     }    
         
@@ -107,6 +113,10 @@ input[type='checkbox'] {
     color: #7C5A0B;
   }
   
+  .collapsible-toggler * {    
+        pointer-events: none;
+   }
+
   .collapsible-content .content-inner {
     background: $hgd-color-cream;
     border-bottom: 1px solid rgba(250, 224, 66, .45);
@@ -116,13 +126,13 @@ input[type='checkbox'] {
   .collapsible-content {
     max-height: 0px;
     overflow: hidden;  
-    transition: max-height 0.2s ease-in;
+    transition: max-height 0.2s;
     
   }
 
-  .toggle:checked + .collapsible-content {
+  .collapsible-content.expand {
     max-height: 700px;
-    transition: max-height 2s ease;
+    transition: max-height 2s ease-out;
   }
 
 
@@ -183,4 +193,13 @@ input[type='checkbox'] {
 
 .logo--desktop {
     max-width: 387px;
+}
+
+// to account for sticky mobile nav
+main {
+    margin-top: 60px;
+
+    @media (min-width: 576px) {
+        margin-top: initial;
+    }
 }
