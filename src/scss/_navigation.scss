@@ -1,5 +1,13 @@
 nav {
 
+    &.menu--bg.menu--expanded {
+        position: fixed;
+        height: 100%;
+        background-color: $hgd-color-cream;
+        transition: background-color 1s ease-in-out;
+        overflow: auto;
+
+    }
     .logo--desktop {
         max-width: 387px;
     }
@@ -11,6 +19,8 @@ nav {
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
         position: relative;
         height: 60px;
+        background-color: #ffffff;
+        transition: background-color 1s ease-in-out;
 
         &.menu-expanded {
             box-shadow: initial;
@@ -74,10 +84,7 @@ nav {
         .menu__socials {
             margin: 2rem 0 0.5rem 0;
         }
-        
-       
-    } 
-    
+    }     
 }
 
 
@@ -85,16 +92,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .logo--mobile {
-        width: 196px;
-    }
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-
+    background-color: #ffffff;    
     transition: background-color 1s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
     &.menu--expanded {
         background-color: $hgd-color-cream;
     }
+
+    .logo--mobile {
+        width: 196px;
+    }    
 }
 
 
@@ -193,3 +201,4 @@ input[type='checkbox'] {
   display:block;
   margin:0 auto;
 }
+
