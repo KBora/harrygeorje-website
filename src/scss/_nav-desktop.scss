@@ -1,0 +1,113 @@
+.nav-desktop {
+
+
+    .nav-desktop__header {
+        display: flex;
+        justify-content: center;
+        margin: 17px 0 8px;
+
+        .nav-desktop__header__logo {
+            max-width: 387px;
+        }
+    }
+
+    .nav-desktop__menu-wrapper {
+        border-top: 1px solid lighten( $hgd-color-text, 35%);;
+        border-bottom: 1px solid lighten( $hgd-color-text, 35%);;
+        height: 45px;
+        transition: height 0.2s;
+        position: absolute;
+        width: 100%;
+        background-color: white;
+
+        &.expand {
+            height: 200px;
+            transition: height 0.35s ease, background-color 2s;
+            background-color: $hgd-color-cream;
+        }
+    }
+
+    .nav-desktop__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: top;        
+        position: relative;
+
+        .menu__item {
+            font-size: 1.2rem;           
+        }
+
+        .menu__item__sub-items--wrapper {
+            position: absolute;
+            max-height: 0px;            
+            overflow: hidden;            
+            // left: calc(50% - 80px);
+            top: 41px;
+            // text-align: center;
+            z-index: 2;
+            transition: max-height 0.2s;
+
+            &.expand {
+                max-height: 250px;
+                transition: max-height 0.5s  ease-out;
+            }
+        }
+
+        .menu__item__sub-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-direction: column;
+            // border-left: 1px solid lighten( $hgd-color-text, 35%);
+            // border-right: 1px solid lighten( $hgd-color-text, 35%);
+            // border-bottom: 1px solid lighten( $hgd-color-text, 35%);
+            // border-top: 4px solid lighten( $hgd-color-text, 35%);
+            padding: 0.5rem 1.5rem 0 0;
+  
+            .menu__item__sub-item {
+                font-size: 1rem;
+    
+                line-height: 1;
+
+                a {
+                    padding-bottom: 0.75rem;
+                }
+
+            }
+
+            .menu__item__sub-sub-item {
+                font-size: 0.95rem;
+
+                a {
+                    padding-right: 0.75rem;
+                    display: inline-flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        a  {
+            display: inline-block;
+            text-decoration: none;
+            color: $hgd-color-text;
+            &:hover {                
+                color: lighten( $hgd-color-text, 15%);
+            }
+            padding: 0.5rem 0 0 ;
+
+            &.expand {
+                border-bottom: 3px solid lighten($hgd-color-text, 15%);
+            }
+        }
+
+        .menu__socials {            
+            display: flex;
+            justify-content: center;
+
+            a {
+                margin: 0 0.5rem;
+            }
+        }
+        
+    }
+}
