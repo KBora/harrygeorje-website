@@ -12,6 +12,12 @@
 .icon {
     height: 1rem;
     width: 1rem;
+
+    &.icon--deskop-menu {
+        transform: rotate(180deg);
+        transition: 0.2s ease;
+        color: lighten($hgd-color-text, 25%);
+    }
 }
 
 .color-yellow {
@@ -51,5 +57,12 @@
 }
 
 .color-white {
-    color: #FAFAFA;
+    color: #FFFFFF;
 }
+
+.close-x {
+    stroke: black;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-width: 5;
+  }

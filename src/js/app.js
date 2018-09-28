@@ -86,6 +86,7 @@ document.addEventListener('click', function (event) {
 // }, false);
 
 
+
 // Desktop menu
 document.addEventListener('click', function (event) {
         if (!event.target.matches('.expand-menu-item--desktop')) return;
@@ -93,17 +94,22 @@ document.addEventListener('click', function (event) {
         // Don't follow the link
         event.preventDefault();	
 
-        var el = event.target;
+        var el = event.target;        
+        var elSvg = el.querySelector('svg');
+
         var menuEl = event.target.nextElementSibling;
         var isMenuExpanded = menuEl.classList.contains('expand');
+        
         var wrapperEl = document.getElementById('navDesktopWrapper');   
         var isWrapperExpanded = wrapperEl.classList.contains('expand');
+        
 
         if (isMenuExpanded) {
             // collapse menu and wrapper            
             menuEl.classList.remove('expand');
             wrapperEl.classList.remove('expand'); 
             el.classList.remove('expand');
+            elSvg.classList.remove('icon--deskop-menu'); 
         } else {
             if (isWrapperExpanded) {
                 // collapse other menus first
@@ -112,7 +118,9 @@ document.addEventListener('click', function (event) {
                 Array.prototype.map.call(desktopMenuSubItems, function(el) {
                     if (el.classList.contains('expand')) {
                         el.previousElementSibling.classList.remove('expand');
+                        el.previousElementSibling.querySelector('svg').classList.remove('icon--deskop-menu'); 
                         return el.classList.remove('expand');
+                        
                     } else {
                         return el;
                     }                    
@@ -120,11 +128,13 @@ document.addEventListener('click', function (event) {
 
                 menuEl.classList.add('expand');
                 el.classList.add('expand');
+                elSvg.classList.add('icon--deskop-menu');
 
             } else {
                 menuEl.classList.add('expand');
                 wrapperEl.classList.add('expand'); 
-                el.classList.add('expand');         
+                el.classList.add('expand');  
+                elSvg.classList.add('icon--deskop-menu');       
             }    
             
         }       
